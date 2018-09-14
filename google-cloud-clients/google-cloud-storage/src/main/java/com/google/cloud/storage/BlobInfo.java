@@ -803,21 +803,21 @@ public class BlobInfo implements Serializable {
    * Returns the event based hold status of the blob, if any.
    */
   public Boolean getEventBasedHold() {
-    return eventBasedHold;
+    return Data.<Boolean>isNull(eventBasedHold) ? null : eventBasedHold;
   }
 
   /**
    * Returns the temporary hold status of the blob, if any.
    */
   public Boolean getTemporaryHold() {
-    return temporaryHold;
+    return Data.<Boolean>isNull(temporaryHold) ? null : temporaryHold;
   }
 
   /**
    * Returns the retention expiration time of the blob, if a retention period is defined.
    */
   public Long getRetentionExpirationTime() {
-    return retentionExpirationTime;
+    return Data.<Long>isNull(retentionExpirationTime) ? null : retentionExpirationTime;
   }
 
   /**
